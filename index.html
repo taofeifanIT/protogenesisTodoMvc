@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>TodoMVC</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" media="screen" />
+	</head>
+
+	<body>
+		<div id='app'>
+			<div>
+				<h1>todos</h1></div>
+			<div class="szk-main">
+				<div class="outLine">
+					<div class="szk-xz"><span>∨</span></div>
+					<div id="szk-txt">
+						<input type="text" name="txt-name" placeholder="What needs to be done?" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" class="txt-name" />
+					</div>
+				</div>
+				<div class="szk-ul">
+					<ul>
+
+					</ul>
+				</div>
+				<div class="szk-all">
+					<span class="all-count">
+                    <span class="count">0</span> item left
+					</span>
+					<ul>
+						<li>
+							<a href="#" onclick="render('all')">All</a>
+						</li>
+						<li>
+							<a href="#" onclick="render('Active')">Active</a>
+						</li>
+						<li>
+							<a href="#" onclick="render('Completed')">Completed</a>
+						</li>
+					</ul>
+					<a href="#" onclick="clearCompleted()">Clear completed</a>
+				</div>
+			</div>
+			<div class="szk-bottom">
+				<p>Doublue-click to edit a todo</p>
+				<p>Written by Evan You</p>
+				<p>Part of TodoMVC</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/index.js"></script>
+
+</html>
